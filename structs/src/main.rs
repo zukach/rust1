@@ -2,6 +2,7 @@ fn main() {
     let name = String::from("Zuka");
     let bird = Bird {name, attack: 10};
     bird.print_name();
+    bird.print_attack();
     println!("{} {}", bird.can_fly(), bird.is_animal());
 }
 
@@ -13,6 +14,9 @@ struct Bird {
 impl Bird {
     fn print_name(&self){
         println!("{}", self.name);
+    }
+    fn print_attack(&self){
+        println!("{}", self.attack);
     }
 }
 
